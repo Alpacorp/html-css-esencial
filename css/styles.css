@@ -35,8 +35,9 @@
 
 body {
     color: var(--gray30);
-    font-family: Arial;
-    font-family: charter;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Arial;
+    font-family: charter; */
 }
 
 a {
@@ -77,4 +78,39 @@ h2 {
 
 h3 {
     font-size: 1.5em;
+}
+
+pre {
+    background: #fec62e;
+}
+
+.hero{
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/patron.png');
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    height: 350px;
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+
+.section-content h3::before{
+    content: counter(titleList, decimal);
+}
+
+.section-content h3::after{
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--gray30);
+    display: block;
+}
+
+::selection{
+    background: pink;
 }
