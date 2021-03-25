@@ -70,19 +70,48 @@ nav details summary {
 
 h1 {
     font-size: 60px;
+    /* margin: 64px 10px 16px 10px; */
+    margin-top: 64px;
+    margin-bottom: 16px;
     /* font-size: 3.75em; */
 }
 
+/* Selector de hermano directo o adyacente */
+
+h1 + p {
+    margin-bottom: 64px;
+}
+
+hr {
+    margin: 64px 0;
+    border: 1px solid red;
+}
+
+/* Selector de hermanos */
+
+/* h1 ~ p {
+    background: red;
+} */
+
 h2 {
     font-size: 2em;
+    margin: 64px 0 40px;
+    font-weight: normal;
 }
 
 h3 {
     font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-weight: normal;
 }
 
 pre {
     background: #fec62e;
+}
+
+blockquote {
+    margin: 32px 0;
 }
 
 .hero{
@@ -94,6 +123,27 @@ pre {
 
 .section-content {
     counter-reset: titleList;
+    margin-top: 164px;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content img{
+    margin-top: 40px;
 }
 
 .section-content h3 {
