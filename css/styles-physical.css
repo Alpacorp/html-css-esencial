@@ -33,12 +33,32 @@
     --gray10: #616161;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--gray30);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     /* font-family: Arial;
     font-family: charter; */
+}
+
+.main {
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/patron.png'); */
+    position: relative;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.main-content {
+    /* background: blue; */
+    /* padding: 20px; */
+    background: white;
 }
 
 a {
@@ -49,6 +69,28 @@ header {
     /* --gray10: red; */
     font-size: 14px;
     color: var(--gray30);
+    /* position: relative; */
+    /* top left bottom right z-index */
+    /* top: 200px; */
+    position: absolute;
+    top: 64px;
+    /* z-index: 2; */
+    width: 188px;
+    left: -232px;
+}
+
+.header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
+header li {
+    margin-bottom: 16px;
 }
 
 header a {
@@ -62,6 +104,7 @@ header a:hover {
 
 nav details summary {
     font-weight: bold;
+    line-height: 24px;
 }
 
 /* ol li:nth-child(3n) {
@@ -70,16 +113,28 @@ nav details summary {
 
 h1 {
     font-size: 60px;
+    font-weight: 400;
     /* margin: 64px 10px 16px 10px; */
     margin-top: 64px;
     margin-bottom: 16px;
     /* font-size: 3.75em; */
+    /* border: 10px solid red;
+    width: 400px;
+    height: 400px;
+    padding: 40px; */
 }
 
 /* Selector de hermano directo o adyacente */
 
-h1 + p {
+/* h1 + p {
     margin-bottom: 64px;
+} */
+
+.debug {
+    outline: 1px solid red;
+    border: 1px solid red;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px red;
 }
 
 hr {
@@ -104,14 +159,34 @@ h3 {
     margin-top: 16px;
     margin-bottom: 24px;
     font-weight: normal;
+    /* width: 200px;
+    border: 1px solid red; */
+    position: sticky;
+    top: 0;
+    background: white;
 }
 
 pre {
     background: #fec62e;
+    padding: 40px;
+    font-family: 'Roboto';
+    line-height: 24px;
 }
 
 blockquote {
     margin: 32px 0;
+    font-size: 24px;
+    padding-left: 16px;
+    line-height: 24px;
+    border-left: 4px solid var(--gray30);
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+blockquote span::before {
+    content: '-';
 }
 
 .hero{
@@ -124,6 +199,7 @@ blockquote {
 .section-content {
     counter-reset: titleList;
     margin-top: 164px;
+    position: relative;
 }
 
 .section-content:first-of-type {
@@ -148,15 +224,16 @@ blockquote {
 
 .section-content h3 {
     counter-increment: titleList;
+    padding-bottom: 8px;
 }
 
 .section-content h3::before{
-    content: counter(titleList, decimal);
+    content: counter(titleList, decimal) '. ';
 }
 
 .section-content h3::after{
     content: '';
-    width: 32px;
+    width: 80px;
     height: 4px;
     background: var(--gray30);
     display: block;
