@@ -111,19 +111,19 @@
                             Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido.
                         </p>
                         <pre>
-                const name = "your name";
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang=&quot;en&quot;&gt;
-                &lt;head&gt;
-                &lt;meta charset=&quot;UTF-8&quot;&gt;
-                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-                &lt;title&gt;Document&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-        
-                &lt;/body&gt;
-                &lt;/html&gt;</pre>
+const name = "your name";
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
                         <h3 id="etiquetas">
                             Etiquetas
                         </h3>
@@ -184,10 +184,39 @@
                             <a href="https://www.alpacorp.net" target="_blank">Mi Sitio Web</a>
                         </p>
                     </section>
+                    <div class="section-content">
+                        <h2>Hola, estos son algunos videos</h2>
+                        <div class="slider">
+                            <scroll-container class="slider-content">
+                                <scroll-page class="slider-slide" id="video-1">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pYi50WZhBQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-2">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pYi50WZhBQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-3">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pYi50WZhBQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                            </scroll-container>
+                            <div class="slider-bullet-list">
+                                <a href="#video-1" class="slider-bullet"></a>
+                                <a href="#video-2" class="slider-bullet"></a>
+                                <a href="#video-3" class="slider-bullet"></a>
+                            </div>
+                        </div>
+                    </div>
                     <p>
                         Si tienes alguna pregunta escríbeme a
                         <a href="mailto:hola@alpacorp.com" target="_blank">hola@alpacorp.com</a>
                     </p>
+                    <div class="section-content">
+                        <h2>Ingresa a nuestro newsletter</h2>
+                        <form action="#" class="form">
+                            <input type="text" placeholder="Nombre Completo" required>
+                            <input type="email" placeholder="Correo Electrónico" required>
+                            <input type="submit" name="" id="" value="Suscribirme">
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
